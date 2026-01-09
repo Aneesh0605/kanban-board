@@ -214,3 +214,26 @@ section .task-column .task button{
         min-width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+
+    /* NAVBAR: keep desktop layout */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* KANBAN STACK */
+    section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--padding-l);
+    }
+
+    .task-column {
+        flex: 1 1 0;
+        width: 100%;
+        min-height: 40vh;
+    }
+}
