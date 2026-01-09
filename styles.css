@@ -154,4 +154,53 @@ section .task-column .task button{
   border-radius: var(--border-radius-m);
   width: fit-content;
   align-self: center;
+
+}
+/* ===============================
+   Responsive Media Queries
+================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+    section {
+        gap: var(--padding-l);
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    nav {
+        padding: var(--padding-m);
+    }
+
+    section {
+        flex-direction: column;   /* STACK COLUMNS VERTICALLY */
+        gap: var(--padding-l);
+    }
+
+    section .task-column {
+        width: 100%;
+    }
+
+    section .task-column.hover-over {
+        scale: 1; /* disable zoom effect on mobile */
+    }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: var(--padding-s);
+    }
+
+    nav button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal .center {
+        width: 90%;
+        padding: var(--padding-l);
+    }
 }
